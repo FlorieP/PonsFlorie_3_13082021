@@ -1,0 +1,19 @@
+{
+  "name": "ponsflorie_3_13082021",
+  "version": "1.0.0",
+  "description": "Projet 3 - Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/acceuil.scss:./css/acceuil.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorieP/PonsFlorie_3_13082021.git"
+  },
+  "author": "Florie Pons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FlorieP/PonsFlorie_3_13082021/issues"
+  },
+  "homepage": "https://github.com/FlorieP/PonsFlorie_3_13082021#readme"
+}
