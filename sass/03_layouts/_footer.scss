@@ -1,12 +1,12 @@
 /***** FOOTER *****/
 #footer{
-    background-color: #353535;
+    background-color: $bg-footer;
     display: flex;
     flex-direction: column;
     padding: 20px;
     a{
         text-decoration: none;
-        color: white;
+        color: $white;
         font-size: 12px;
         line-height: 22px;      
     }
@@ -15,7 +15,7 @@
         flex-direction: column;
     }
     & .text-logo{
-        color: white;
+        color: $white;
         font-size: 16px;
         font-family: 'Shrikhand', cursive;
         padding-bottom: 10px;

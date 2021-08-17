@@ -1,3 +1,4 @@
+/***** VARIABLES *****/
 /***** BODY *****/
 body {
   max-width: 767px;
@@ -7,12 +8,128 @@ body {
   font-size: 15px;
 }
 
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 #header {
   display: flex;
   justify-content: center;
 }
 #header img {
   margin: 15px;
+}
+
+/***** RECHERCHE ******/
+.search {
+  width: 100%;
+  border: none;
+  background-color: #EAEAEA;
+  margin: 0px;
+  padding: 12px;
+}
+
+input.text {
+  font-family: FontAwesome, "Roboto";
+  text-decoration: inherit;
+  text-align: center;
+  font-weight: bold;
+}
+
+/***** TITRE *****/
+.title {
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 15px 10px 30px 10px;
+}
+.title h1 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-inline: 40px;
+}
+
+/***** BOUTON *****/
+button {
+  border: none;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  color: #FFFFFF;
+  padding: 15px 20px 15px 20px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.3);
+  transition: all 400ms ease-in-out;
+}
+button:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  margin: 20px 0px 25px 0px;
+}
+.functioning h2 {
+  padding: 10px 10px 10px 10px;
+  margin: 0px;
+}
+.functioning a {
+  width: auto;
+}
+
+.group-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 15px 5px 5px 20px;
+  align-items: baseline;
+}
+.box .fas {
+  color: #7E7E7E;
+  width: 15px;
+}
+.box:hover {
+  background-color: #f4eefc;
+}
+
+.number {
+  color: #FFFFFF;
+  font-size: 11px;
+  background-color: #9356DC;
+  position: relative;
+  padding: 4px 7px 3px 7px;
+  left: -30px;
+  border-radius: 50%;
+}
+
+.explication {
+  margin-left: 15px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 /***** FOOTER *****/
@@ -24,7 +141,7 @@ body {
 }
 #footer a {
   text-decoration: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 12px;
   line-height: 22px;
 }
@@ -33,7 +150,7 @@ body {
   flex-direction: column;
 }
 #footer .text-logo {
-  color: white;
+  color: #FFFFFF;
   font-size: 16px;
   font-family: "Shrikhand", cursive;
   padding-bottom: 10px;

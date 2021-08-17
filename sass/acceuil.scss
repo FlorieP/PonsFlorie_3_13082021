@@ -1,3 +1,8 @@
+@import "./02_variables/variables.scss";
+@import "./02_variables/mixins.scss";
 @import "./01_base/_base.scss";
 @import "./03_layouts/_header.scss";
+@import "./04_pages/acceuil/seach.scss";
+@import "./04_pages/acceuil/en-tête.scss";
+@import "./04_pages/acceuil/functioning.scss";
 @import "./03_layouts/_footer.scss";
