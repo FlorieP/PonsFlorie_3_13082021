@@ -29,12 +29,15 @@
     & .fas {
         color: $color-icons;
         width: 15px;
-        &:hover{
+        /*&:hover{
             color: $primary;
-        }
+        }*/
     }
     &:hover{
         background-color: lighten($primary, 36%);
+        .fas{
+            color: $primary;
+        }
     }
 }
 .number{
