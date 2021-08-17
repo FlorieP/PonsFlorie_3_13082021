@@ -8,7 +8,7 @@
         margin: 0px;
     }
     a{
-        width: auto;
+        width: 230px;
     }
 }
 .group-box{
@@ -29,6 +29,9 @@
     & .fas {
         color: $color-icons;
         width: 15px;
+        &:hover{
+            color: $primary;
+        }
     }
     &:hover{
         background-color: lighten($primary, 36%);

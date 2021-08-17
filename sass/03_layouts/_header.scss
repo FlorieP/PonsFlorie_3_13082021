@@ -1,7 +1,11 @@
 #header{
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 2;
+    @include header-shadow;
     img {
         margin: 15px;
+        width: 130px;
     }
 }
