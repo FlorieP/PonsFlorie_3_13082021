@@ -1,0 +1,12 @@
+/***** TITRE *****/
+.title{
+  background-color: $bg-section;
+  text-align: center;
+  padding: 15px 10px 30px 10px;
+  h1{
+    margin-inline: 40px;
+  }
+  button{
+    @include button;
+  }
+}
