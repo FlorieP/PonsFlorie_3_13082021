@@ -1,0 +1,50 @@
+.functioning{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin: 20px 0px 25px 0px;
+    h2{
+        padding: 10px 10px 10px 10px;
+        margin: 0px;
+    }
+    a{
+        width: 235px;
+    }
+}
+.group-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    background-color: $bg-section;
+    border-radius: 20px;
+    @include box-shadow;
+    padding: 20px;
+    margin: 15px 5px 5px 20px;
+    align-items: baseline;
+    & .fas {
+        color: $color-icons;
+        width: 15px;
+    }
+    &:hover{
+        background-color: lighten($primary, 36%);
+    }
+}
+.number{
+    color: $white;
+    font-size: 11px;
+    background-color: $primary;
+    position: relative;
+    padding: 4px 7px 3px 7px;
+    left: -30px;
+    border-radius: 50%;
+}
+.explication{
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
