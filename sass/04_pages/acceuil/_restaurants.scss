@@ -1,0 +1,44 @@
+#restaurants{
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    padding: 35px 0px 40px 0px;
+    h2{
+        margin: 10px 10px 0px 20px;
+    }
+}
+.card{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    height: 210px;
+    position: relative;
+    img{
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        border-radius: 15px 15px 0px 0px;
+    }
+    & .description{
+        height: 30%;
+        line-height: 5px;
+        margin: 5px 10px 5px 10px ;
+        
+    }
+    @include heart;
+}
+
+.new{
+    color: #008766;
+    background-color: #99E2D0;
+    width:  60px;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    right: 10px;    
+}

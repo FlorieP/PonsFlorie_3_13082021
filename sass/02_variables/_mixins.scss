@@ -23,3 +23,12 @@
 @mixin box-shadow {
     box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.1);    
 }
+
+@mixin heart {
+    .fa-heart{
+        font-size: 20px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}
