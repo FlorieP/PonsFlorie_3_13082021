@@ -1,4 +1,29 @@
 /***** VARIABLES *****/
+/*@mixin heart {
+    .fa-heart{
+        font-size: 20px;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+    .far{
+        color: black;
+        z-index: 1;
+        &:hover{
+            z-index: -1;
+        }
+    }
+    .fas{
+        z-index: -1;
+        &:hover{
+            background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            color: transparent;
+            z-index: 1;
+        }
+    }    
+}*/
 /***** BODY *****/
 body {
   max-width: 767px;
@@ -181,6 +206,12 @@ button:hover {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+.card .fa-heart:hover {
+  background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .new {
