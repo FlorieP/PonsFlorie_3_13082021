@@ -12,7 +12,6 @@
     font-size: 13px;
     font-weight: bold;
     box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.3);
-    transition: all 400ms ease-in-out;
     &:hover{
         cursor: pointer;
         background: linear-gradient(to bottom right, $primary, $secondary);
@@ -24,43 +23,27 @@
     box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.1);    
 }
 
-/*@mixin heart {
-    .fa-heart{
-        font-size: 20px;
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-    }
-    .far{
-        color: black;
-        z-index: 1;
-        &:hover{
-            z-index: -1;
-        }
-    }
-    .fas{
-        z-index: -1;
-        &:hover{
-            background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
-            background-clip: border-box;
-            -webkit-background-clip: text;
-            color: transparent;
-            z-index: 1;
-        }
-    }    
-}*/
-
 @mixin heart {
     .fa-heart{
         font-size: 20px;
         position: absolute;
         bottom: 20px;
-        right: 20px;
+        right: 20px;       
+    }
+    .far{
+        background-color: white;
+        z-index: 2;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
         &:hover{
-            background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
-            background-clip: border-box;
-            -webkit-background-clip: text;
-            color: transparent;
+            opacity: 0;
         }
     }
+    .fas{
+        background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        color: transparent;
+        z-index: 1;
+    } 
 }
