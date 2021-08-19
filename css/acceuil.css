@@ -79,7 +79,6 @@ button {
   font-size: 13px;
   font-weight: bold;
   box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.3);
-  transition: background 400ms ease-in-out;
 }
 button:hover {
   cursor: pointer;
@@ -168,23 +167,23 @@ button:hover {
 }
 .card img {
   width: 100%;
-  height: 70%;
+  height: 65%;
   object-fit: cover;
   border-radius: 15px 15px 0px 0px;
 }
 .card .description {
-  height: 30%;
+  height: 35%;
   line-height: 5px;
   margin: 5px 10px 5px 10px;
 }
 .card .fa-heart {
-  font-size: 20px;
+  font-size: 24px;
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 30px;
+  right: 30px;
 }
 .card .far {
-  background-color: white;
+  background-color: #FFFFFF;
   z-index: 2;
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
