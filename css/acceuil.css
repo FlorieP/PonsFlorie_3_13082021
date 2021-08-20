@@ -18,6 +18,11 @@ h2 {
   font-weight: bold;
 }
 
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -29,6 +34,13 @@ a {
 }
 #header img {
   margin: 15px;
+}
+#header .fa-arrow-left {
+  font-size: 18px;
+  color: #353535;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /***** RECHERCHE ******/
@@ -128,6 +140,72 @@ input.text {
   font-weight: bold;
 }
 
+/***** RESTAURANTS *****/
+#restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  padding: 35px 0px 40px 0px;
+}
+#restaurants h2 {
+  margin: 10px 10px 0px 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  margin: 20px;
+  height: 210px;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  height: 65%;
+  object-fit: cover;
+  border-radius: 15px 15px 0px 0px;
+}
+.card .description {
+  height: 35%;
+  line-height: 5px;
+  margin: 5px 10px 5px 10px;
+}
+.card .new {
+  color: #008766;
+  background-color: #99E2D0;
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.card .fa-heart {
+  font-size: 24px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.card .heart .far {
+  background-color: white;
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.card .heart .far:hover {
+  opacity: 0;
+}
+.card .heart .fas {
+  background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  z-index: 1;
+}
+
 /***** FOOTER *****/
 #footer {
   background-color: #353535;
@@ -155,6 +233,69 @@ input.text {
 #footer .fa-utensils {
   height: 15px;
   width: 15px;
+}
+
+/***** LOADING SPINNER *****/
+.spinner-box {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  animation: bounce 3.2s ease-in-out both;
+  animation-delay: 3.2s;
+}
+.spinner-box .load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner-box p {
+  color: #9356DC;
+  font-size: 40px;
+  font-family: "Shrikhand", cursive;
+}
+
+@keyframes bounce {
+  to {
+    opacity: 0;
+    transform: translate3d(0, -5rem, 0);
+    color: #FF79DA;
+  }
+}
+.O {
+  animation: bounce 1.6s ease 0.2s infinite alternate;
+}
+
+.h {
+  animation: bounce 1.6s ease 0.4s infinite alternate;
+}
+
+.m {
+  animation: bounce 1.6s ease 0.6s infinite alternate;
+}
+
+.y {
+  animation: bounce 1.6s ease 0.8s infinite alternate;
+}
+
+.f {
+  animation: bounce 1.6s ease 1s infinite alternate;
+}
+
+.o {
+  animation: bounce 1.6s ease 1.2s infinite alternate;
+}
+
+.o-2 {
+  animation: bounce 1.6s ease 1.4s infinite alternate;
+}
+
+.d {
+  animation: bounce 1.6s ease 1.6s infinite alternate;
 }
 
 /*# sourceMappingURL=acceuil.css.map */

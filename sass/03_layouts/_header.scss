@@ -1,6 +1,7 @@
 #header{
     display: flex;
     justify-content: center;
+    @include header-shadow;
     img {
         margin: 15px;
     }
