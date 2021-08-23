@@ -1,6 +1,4 @@
 /**** LOADING SPINNER ****/
-
-
 .spinner-box{
 	position:  fixed;
 	width: 100%;
@@ -24,6 +22,7 @@
     }
 }
 
+/***** KEYFRAME LOADING *****/
 @keyframes bounce {
   to {
     transform: translate3d(0, -4rem, 0);

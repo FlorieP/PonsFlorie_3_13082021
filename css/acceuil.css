@@ -1,4 +1,4 @@
-/***** VARIABLES *****/
+/**** KEYFRAME COEUR ****/
 @keyframes heart-full {
   0% {
     transform: scale(0);
@@ -34,11 +34,17 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
+/***** HEADER *****/
 #header {
   display: flex;
   justify-content: center;
@@ -104,6 +110,7 @@ button:hover {
   box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
+/***** FONCTIONNEMENT *****/
 .functioning {
   display: flex;
   flex-direction: column;
@@ -138,9 +145,6 @@ button:hover {
 .box .fas {
   color: #7E7E7E;
   width: 15px;
-  /*&:hover{
-      color: $primary;
-  }*/
 }
 .box:hover {
   background-color: #f4eefc;
@@ -202,7 +206,6 @@ button:hover {
   right: 30px;
 }
 .card .far {
-  background-color: #FFFFFF;
   z-index: 2;
   opacity: 1;
   transition: opacity 0.6s ease-in-out;
@@ -211,6 +214,7 @@ button:hover {
   opacity: 0;
 }
 .card .far:hover + .fas {
+  opacity: 1;
   animation: heart-full 0.4s linear both;
 }
 .card .fas {
@@ -219,12 +223,14 @@ button:hover {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   color: transparent;
+  opacity: 0;
   z-index: 1;
   transform-origin: 50% bottom;
   transform: scale(1);
   animation: transform 0.4s cubic-bezier(0.43, 0.21, 1, 0.45);
 }
 
+/***** NOUVEAU *****/
 .new {
   color: #008766;
   background-color: #99E2D0;
@@ -292,6 +298,7 @@ button:hover {
   font-family: "Shrikhand", cursive;
 }
 
+/***** KEYFRAME LOADING *****/
 @keyframes bounce {
   to {
     transform: translate3d(0, -4rem, 0);
