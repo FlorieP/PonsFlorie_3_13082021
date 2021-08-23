@@ -14,7 +14,8 @@
     box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.3);
     &:hover{
         cursor: pointer;
-        background: linear-gradient(to bottom right, $primary, $secondary);
+        background: linear-gradient(to bottom right, lighten($primary, 2%), lighten($secondary, 2%));
+        box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
     }
 
 }
@@ -51,14 +52,18 @@
             opacity: 0;
             + .fas{
                 animation: heart-full 0.4s linear both;
-                background: linear-gradient(63deg, $secondary 0%, $primary 100%);
-                background-clip: content-box;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                color: transparent;
-                z-index: 1;
-
             }
         }
+    }
+    .fas{
+        background: linear-gradient(63deg, $secondary 0%, $primary 100%);
+        background-clip: content-box;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+        z-index: 1;
+        transform-origin: 50% bottom;
+        transform: scale(1);
+        animation: transform 0.4s cubic-bezier(0.43, 0.21, 1, 0.45);
     }
 }
