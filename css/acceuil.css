@@ -1,4 +1,15 @@
 /***** VARIABLES *****/
+@keyframes heart-full {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /***** BODY *****/
 body {
   max-width: 767px;
@@ -38,6 +49,13 @@ a {
 #header img {
   margin: 15px;
   width: 130px;
+}
+#header .fa-arrow-left {
+  font-size: 18px;
+  color: #353535;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 /***** RECHERCHE ******/
@@ -186,15 +204,17 @@ button:hover {
   background-color: #FFFFFF;
   z-index: 2;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
 }
 .card .far:hover {
   opacity: 0;
 }
-.card .fas {
+.card .far:hover + .fas {
+  animation: heart-full 0.4s linear both;
   background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: border-box;
+  background-clip: content-box;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   color: transparent;
   z-index: 1;
 }
