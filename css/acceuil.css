@@ -18,6 +18,19 @@ body {
   font-family: "Roboto";
   font-size: 15px;
 }
+@media screen and (min-width: 810px) and (max-width: 1023px) {
+  body {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
 
 h1 {
   font-size: 20px;
@@ -131,6 +144,13 @@ button:hover {
   align-items: center;
   width: auto;
 }
+@media screen and (min-width: 810px) {
+  .group-box {
+    /*Tablette portrait*/
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 
 .box {
   display: flex;
@@ -178,6 +198,30 @@ button:hover {
 }
 #restaurants h2 {
   margin: 10px 10px 0px 20px;
+}
+@media screen and (min-width: 1024px) {
+  #restaurants {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .group-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 810px) and (max-width: 1023px) {
+  .group-card a {
+    flex: 1 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .group-card a {
+    flex: 1 20%;
+  }
 }
 
 .card {
@@ -252,6 +296,19 @@ button:hover {
   flex-direction: column;
   padding: 20px;
 }
+@media screen and (min-width: 810px) {
+  #footer {
+    position: relative;
+    bottom: 0px;
+  }
+}
+@media screen and (min-width: 810px) {
+  #footer .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 #footer a {
   text-decoration: none;
   color: #FFFFFF;
@@ -261,6 +318,13 @@ button:hover {
 #footer div {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 810px) {
+  #footer .logo {
+    position: absolute;
+    top: 30px;
+    left: 45%;
+  }
 }
 #footer .text-logo {
   color: #FFFFFF;

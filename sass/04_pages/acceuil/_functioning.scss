@@ -17,6 +17,10 @@
     flex-direction: column;
     align-items: center;
     width: auto;
+    @media screen and (min-width: 810px){ /*Tablette portrait*/
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 .box{
     display: flex;

@@ -19,6 +19,19 @@ body {
   font-family: "Roboto";
   font-size: 15px;
 }
+@media screen and (min-width: 810px) and (max-width: 1023px) {
+  body {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}
 
 h1 {
   font-size: 20px;
@@ -158,6 +171,15 @@ a {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
+  }
+}
 
 .carte {
   display: flex;
@@ -165,6 +187,12 @@ a {
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
+}
+@media screen and (min-width: 1024px) {
+  .carte {
+    flex: 1 25%;
+    margin: 0px 30px 0px 30px;
+  }
 }
 
 .title-list {
@@ -195,6 +223,11 @@ a {
   box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   animation: loading-list 0.8s both;
+}
+@media screen and (min-width: 1024px) {
+  .list {
+    margin-bottom: 30px;
+  }
 }
 .list .description {
   padding: 10px;
@@ -274,6 +307,19 @@ a {
   flex-direction: column;
   padding: 20px;
 }
+@media screen and (min-width: 810px) {
+  #footer {
+    position: relative;
+    bottom: 0px;
+  }
+}
+@media screen and (min-width: 810px) {
+  #footer .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 #footer a {
   text-decoration: none;
   color: #FFFFFF;
@@ -283,6 +329,13 @@ a {
 #footer div {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 810px) {
+  #footer .logo {
+    position: absolute;
+    top: 30px;
+    left: 45%;
+  }
 }
 #footer .text-logo {
   color: #FFFFFF;
