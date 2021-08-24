@@ -22,4 +22,7 @@
     padding: 10px 10px 0px 20px;
   }
   @include heart;
+  .fa-heart{
+    bottom: -20px;
+  }
 }

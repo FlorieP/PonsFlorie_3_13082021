@@ -119,6 +119,9 @@ a {
   transform: scale(1);
   animation: transform 0.4s cubic-bezier(0.43, 0.21, 1, 0.45);
 }
+.banner .fa-heart {
+  bottom: -20px;
+}
 
 /**** MENU ****/
 /**** KEYFRAME LISTE****/
