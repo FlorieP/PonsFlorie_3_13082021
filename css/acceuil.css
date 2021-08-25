@@ -1,4 +1,15 @@
-/***** VARIABLES *****/
+/**** KEYFRAME COEUR ****/
+@keyframes heart-full {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /***** BODY *****/
 body {
   max-width: 767px;
@@ -6,6 +17,19 @@ body {
   padding: 0px;
   font-family: "Roboto";
   font-size: 15px;
+}
+@media screen and (min-width: 810px) and (max-width: 1023px) {
+  body {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  body {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 }
 
 h1 {
@@ -23,18 +47,27 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
 a {
   text-decoration: none;
   color: black;
 }
 
+/***** HEADER *****/
 #header {
   display: flex;
   justify-content: center;
+  position: relative;
+  z-index: 2;
   box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.2);
 }
 #header img {
   margin: 15px;
+  width: 130px;
 }
 #header .fa-arrow-left {
   font-size: 18px;
@@ -67,9 +100,13 @@ input.text {
   padding: 15px 10px 30px 10px;
 }
 .title h1 {
+  font-size: 20px;
+  font-weight: bold;
   margin-inline: 40px;
 }
-.title button {
+
+/***** BOUTON *****/
+button {
   border: none;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #FFFFFF;
@@ -79,13 +116,14 @@ input.text {
   font-size: 13px;
   font-weight: bold;
   box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.3);
-  transition: all 400ms ease-in-out;
 }
-.title button:hover {
+button:hover {
   cursor: pointer;
-  background: linear-gradient(to bottom right, #9356DC, #FF79DA);
+  background: linear-gradient(to bottom right, #985ede, #ff83dd);
+  box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
 }
 
+/***** FONCTIONNEMENT *****/
 .functioning {
   display: flex;
   flex-direction: column;
@@ -97,7 +135,7 @@ input.text {
   margin: 0px;
 }
 .functioning a {
-  width: 235px;
+  width: 230px;
 }
 
 .group-box {
@@ -105,6 +143,13 @@ input.text {
   flex-direction: column;
   align-items: center;
   width: auto;
+}
+@media screen and (min-width: 810px) {
+  .group-box {
+    /*Tablette portrait*/
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 .box {
@@ -123,6 +168,9 @@ input.text {
 }
 .box:hover {
   background-color: #f4eefc;
+}
+.box:hover .fas {
+  color: #9356DC;
 }
 
 .number {
@@ -151,6 +199,30 @@ input.text {
 #restaurants h2 {
   margin: 10px 10px 0px 20px;
 }
+@media screen and (min-width: 1024px) {
+  #restaurants {
+    flex: 1;
+  }
+}
+
+@media screen and (min-width: 810px) {
+  .group-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 810px) and (max-width: 1023px) {
+  .group-card a {
+    flex: 1 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .group-card a {
+    flex: 1 20%;
+  }
+}
 
 .card {
   background-color: white;
@@ -171,7 +243,39 @@ input.text {
   line-height: 5px;
   margin: 5px 10px 5px 10px;
 }
-.card .new {
+.card .fa-heart {
+  font-size: 24px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+.card .far {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+}
+.card .far:hover {
+  opacity: 0;
+}
+.card .far:hover + .fas {
+  opacity: 1;
+  animation: heart-full 0.4s linear both;
+}
+.card .fas {
+  background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  opacity: 0;
+  z-index: 1;
+  transform-origin: 50% bottom;
+  transform: scale(1);
+  animation: transform 0.4s cubic-bezier(0.43, 0.21, 1, 0.45);
+}
+
+/***** NOUVEAU *****/
+.new {
   color: #008766;
   background-color: #99E2D0;
   width: 60px;
@@ -184,28 +288,6 @@ input.text {
   top: 10px;
   right: 10px;
 }
-.card .fa-heart {
-  font-size: 24px;
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-}
-.card .heart .far {
-  background-color: white;
-  z-index: 2;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
-.card .heart .far:hover {
-  opacity: 0;
-}
-.card .heart .fas {
-  background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  color: transparent;
-  z-index: 1;
-}
 
 /***** FOOTER *****/
 #footer {
@@ -213,6 +295,19 @@ input.text {
   display: flex;
   flex-direction: column;
   padding: 20px;
+}
+@media screen and (min-width: 810px) {
+  #footer {
+    position: relative;
+    bottom: 0px;
+  }
+}
+@media screen and (min-width: 810px) {
+  #footer .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 #footer a {
   text-decoration: none;
@@ -223,6 +318,13 @@ input.text {
 #footer div {
   display: flex;
   flex-direction: column;
+}
+@media screen and (min-width: 810px) {
+  #footer .logo {
+    position: absolute;
+    top: 30px;
+    left: 45%;
+  }
 }
 #footer .text-logo {
   color: #FFFFFF;
@@ -236,35 +338,37 @@ input.text {
   width: 15px;
 }
 
-/***** LOADING SPINNER *****/
+/**** LOADING SPINNER ****/
 .spinner-box {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  animation: bounce 3.2s ease-in-out both;
-  animation-delay: 3.2s;
+  animation: bounce 1.6s ease-in-out both;
+  animation-delay: 3.5s;
 }
 .spinner-box .load {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.spinner-box p {
+.spinner-box .load p {
   color: #9356DC;
   font-size: 40px;
   font-family: "Shrikhand", cursive;
 }
 
+/***** KEYFRAME LOADING *****/
 @keyframes bounce {
   to {
-    opacity: 0;
-    transform: translate3d(0, -5rem, 0);
+    transform: translate3d(0, -4rem, 0);
     color: #FF79DA;
+    opacity: 0;
+    visibility: hidden;
   }
 }
 .O {

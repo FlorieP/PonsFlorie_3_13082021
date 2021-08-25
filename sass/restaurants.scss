@@ -1,6 +1,8 @@
-@import "./02_utils/variables.scss";
-@import "./02_utils/mixins.scss";
+@import "./02_variables/_variables.scss";
+@import "./02_variables/_mixins.scss";
 @import "./01_base/_base.scss";
 @import "./03_layouts/_header.scss";
-@import "./04_pages/restaurants/en-tête-menu.scss";
+@import "./04_pages/restaurants/_en-tête-menu.scss";
+@import "./04_pages/restaurants/_menu.scss";
 @import "./03_layouts/_footer.scss";
+@import "./03_layouts/_loading-spinner.scss";
