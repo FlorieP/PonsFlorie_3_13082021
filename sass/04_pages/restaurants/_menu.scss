@@ -126,20 +126,19 @@
     }
     &:hover > .check{
         margin-right: 0px;
+    }
     &:hover .fa-check-circle{
         transition: all 0.3s 0.3s;
         transform: rotate(360deg);
     }
-  }
+}
 
   /**** BOUTON ****/
-  .order{
+.order{
     background-color: #F6F6F6;
     text-align: center;
     padding: 20px 0px 30px 0px;
     button{
         @include button;
     }
-  }
-
 }

@@ -227,7 +227,6 @@ a {
   box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   animation: loading-list 0.6s both;
-  /**** BOUTON ****/
 }
 @media screen and (min-width: 1024px) {
   .list {
@@ -275,16 +274,18 @@ a {
 .list:hover > .check {
   margin-right: 0px;
 }
-.list:hover > .check:hover .fa-check-circle {
+.list:hover .fa-check-circle {
   transition: all 0.3s 0.3s;
   transform: rotate(360deg);
 }
-.list .order {
+
+/**** BOUTON ****/
+.order {
   background-color: #F6F6F6;
   text-align: center;
   padding: 20px 0px 30px 0px;
 }
-.list .order button {
+.order button {
   border: none;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: #FFFFFF;
@@ -296,7 +297,7 @@ a {
   box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.3);
   transition: all 400ms linear;
 }
-.list .order button:hover {
+.order button:hover {
   cursor: pointer;
   background: linear-gradient(to bottom right, #9356DC, #FF79DA);
   box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
