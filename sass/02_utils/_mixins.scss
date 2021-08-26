@@ -12,10 +12,11 @@
     font-size: 13px;
     font-weight: bold;
     box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.3);
-    transition: all 400ms ease-in-out;
+    transition: all 400ms linear;
     &:hover{
         cursor: pointer;
         background: linear-gradient(to bottom right, $primary, $secondary);
+        box-shadow: 1px 4px 8px 0px rgba(0, 0, 0, 0.5);
     }
 
 }
