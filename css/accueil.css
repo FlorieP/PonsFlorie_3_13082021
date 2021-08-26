@@ -1,4 +1,16 @@
 /***** VARIABLES *****/
+/**** KEYFRAME COEUR ****/
+@keyframes heart-full {
+  0% {
+    transform: scale(0);
+  }
+  90% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /***** BODY *****/
 body {
   max-width: 767px;
@@ -239,21 +251,29 @@ button:hover {
   bottom: 30px;
   right: 30px;
 }
-.card .heart .far {
-  background-color: white;
+.card .far {
   z-index: 2;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
 }
-.card .heart .far:hover {
+.card .far:hover {
   opacity: 0;
 }
-.card .heart .fas {
+.card .far:hover + .fas {
+  opacity: 1;
+  animation: heart-full 0.4s linear both;
+}
+.card .fas {
   background: linear-gradient(63deg, #FF79DA 0%, #9356DC 100%);
-  background-clip: border-box;
+  background-clip: content-box;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
   color: transparent;
+  opacity: 0;
   z-index: 1;
+  transform-origin: 50% bottom;
+  transform: scale(1);
+  animation: transform 0.4s cubic-bezier(0.43, 0.21, 1, 0.45);
 }
 
 /***** NOUVEAU *****/
