@@ -1,6 +1,6 @@
 # OH MY FOOD !
 
-Créer un site web selon une maquettes et le dynamiser avec des animations CSS. 
+Transformer une maquette en site web et le dynamiser avec des animations CSS. 
   
 ## Pré-requis
  
